@@ -1,0 +1,13 @@
+<div class="container justify-content-center mt-1">
+    <!-- fighters="fighters" => it works because this custome direct has been passed with the controller 'fighterListController' in the route setting for /home -->
+    <!-- Hence, this page can gain access to the array {{fighters}} which is defined in the controller -->
+    <!-- In this case, "fighters" in double quotes is an object {{fighters}} which is assigned to the fighters, the fighters property of $scope for random-fighter directive -->
+    <!-- "Random Fighter" is a string which assigned to the title, the title property of $scope for random-fighter directive -->
+    <div class="row justify-content-center text-center">
+        <class-description fighters="fighters">
+            <!-- originally any content inside this custom directive element wont be rendered -->
+            <!-- but you can modify the directive property in app.js "transclude" to be true to show the content -->
+            <h1 class="display-3 fw-bold">Class description</h1>
+        </class-description>
+    </div>
+</div>

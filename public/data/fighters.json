@@ -1,0 +1,54 @@
+[
+    {
+        "name": "Raymond",
+        "level": 29,
+        "class": "Mage",
+        "combatPower": 1000,
+        "classColor": "info",
+        "classThumb": "content/mage.jfif",
+        "content": {
+            "role": "Spellcaster and Crowd Control",
+            "description": "Mages harness the power of arcane magic to cast destructive spells and control the battlefield. They are masters of crowd control, able to freeze, burn, and manipulate enemies with a wide range of spells."
+        },
+        "available": true
+    },
+    {
+        "name": "Tiffany",
+        "level": 26,
+        "class": "Hunter",
+        "combatPower": 1200,
+        "classColor": "success",
+        "classThumb": "content/hunter.jfif",
+        "content": {
+            "role": "Ranged Damage Dealer",
+            "description": "Hunters are skilled marksmen known for their precision and ranged combat abilities. They excel at dealing damage from a distance using bows or firearms. Hunters often have unique abilities for tracking and taming animals, which can be used in and out of combat."
+        },
+        "available": true
+    },
+    {
+        "name": "Rachael",
+        "level": 30,
+        "class": "Priest",
+        "combatPower": 500,
+        "classColor": "warning",
+        "classThumb": "content/priest.jfif",
+        "content": {
+            "role": "Healer and Support",
+            "description": "The Priest class specializes in healing and supporting their allies. They possess powerful restorative spells and abilities to keep their team members alive in battle. Additionally, Priests often have crowd-control abilities and can remove harmful effects from their teammates."
+        },
+        "available": true
+    },
+    {
+        "name": "Leon",
+        "level": 28,
+        "class": "Warrior",
+        "combatPower": 550,
+        "classColor": "danger",
+        "classThumb": "content/warrior.jfif",
+        "content": {
+            "role": "Tank and Melee Damage Dealer",
+            "description": "Warriors are formidable melee combatants and tanks. They can absorb a tremendous amount of damage and are often found at the front lines of battles. Warriors are known for their powerful strikes and abilities that enable them to control and disrupt opponents on the battlefield."
+        },
+        "available": true
+    }
+]

@@ -1,0 +1,50 @@
+<div class="container p-4">
+  <!-- bind the input to the model variable 'search' -->
+  <input type="text" ng-model="search" class="form-control mt-3" placeholder="search for a fighter">
+  <h2 class="mt-3">Figther List</h2>
+
+  <button class="btn btn-primary rounded" ng-click="order = 'combatPower'">Order by CP</button>
+  <button class="btn btn-primary rounded ms-2" ng-click="order = 'level'">Order by level</button>
+  <!-- <button class="btn btn-danger rounded ms-2" ng-click="removeAll()">Delete All</button> -->
+  <button class="btn btn-danger rounded ms-2" ng-click="resetAll()">Reset</button>
+
+
+  <ul class="list-group mt-1" id="fighter-list">
+    <!-- ng-repeat => loop up the fighters list in behind model app.js -->
+    <!-- orderBy => to decide the order (received from order buttons) -->
+    <!-- filter => to grab the search input and apply it to the list  -->
+    <!-- ng-show => to show models based on data's property which is boolean value. True to show while false to hide -->
+    <li ng-repeat="fighter in fighters | orderBy: order | filter: search" ng-show="fighter.available"
+      class="list-group-item text-{{fighter.classColor}} mt-2 rounded d-flex justify-content-between align-items-center border border-3">
+      <div class="d-flex align-items-center">
+
+        <!-- ng-src => to refer the media source -->
+        <img ng-src="{{fighter.classThumb}}" alt="" style="width: 50px; height: 50px; margin-right: 10px;">
+        <span class="fs-3 fw-bold">{{fighter.name}}</span>
+      </div>
+      <div class="text-end">
+        Level: {{fighter.level}} - Class: {{fighter.class}} - Combat Power: {{fighter.combatPower}}
+      </div>
+      <button ng-click="removeFighter(fighter)" class="btn btn-danger">X</button>
+    </li>
+  </ul>
+
+  <!-- ng-submit should be assigned with a function. In this case, addFighter is assigned and fire when the form is submitted -->
+  <!-- <form ng-submit="addFighter()" class="mt-5 container">
+    <h2 class="mt-3">Add a fighter</h2>
+
+    <input type="text" ng-model="newFighter.name" placeholder="name" class="form-control mt-2" />
+    <input type="text" ng-model="newFighter.level" placeholder="level" class="form-control mt-2" />
+    <input type="text" ng-model="newFighter.combatPower" placeholder="CP" class="form-control mt-2" />
+
+    <select ng-model="newFighter.class" class="form-select mt-2 text-secondary">
+      <option value="" class="text-secondary">Select a class</option>
+      <option ng-repeat="class in classes" ng-value="class" class="text-secondary">{{class}}</option>
+    </select>
+
+    <input type="submit" value="Add a new fighter" class="btn btn-primary rounded-2 mt-2">
+  </form> -->
+
+  <a ng-click="goToAddFighter()" class="btn btn-secondary mt-3">Add a new fighter</a>
+
+</div>

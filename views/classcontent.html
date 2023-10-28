@@ -1,0 +1,34 @@
+<div class="container mt-1">
+    <!-- inculde the transclude content as an attr of a html element (div) -->
+    <div ng-transclude></div>
+
+    <div class="row justify-content-center">
+        <div class="col-4 text-center">
+            <select ng-model="selectedClass" class="form-select mt-2 text-secondary">
+                <option value="" class="text-secondary">Select a class</option>
+                <option ng-repeat="class in classes" ng-value="class" class="text-secondary">{{class}}</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12 text-center">
+            <!-- <h4 class="display-6 fw-bold">{{fighters[random].class}}</h4> -->
+            <h4 class="display-6 fw-bold">{{selectedClass}}</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <img src="{{getClassContent(selectedClass).classThumb}}" alt="" class="img-fluid" style="max-height: 200px;">
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <!-- <h6 class="mb-3">{{fighters[random].content.role}}</h6> -->
+            <!-- <p class="text-start">{{fighters[random].content.description}}</p> -->
+
+            <h6 class="mb-3">{{getClassContent(selectedClass).content.role}}</h6>
+            <p class="text-start">{{getClassContent(selectedClass).content.description}}</p>
+        </div>
+    </div>
+</div>

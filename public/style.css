@@ -1,0 +1,38 @@
+/* add animation to the "main" html element (ng-view) which is in index.html */
+main.ng-enter {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+main.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+/* create animation for adding list item  */
+#fighter-list li.ng-enter {
+    transition: 0.2s linear all;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+#fighter-list li.ng-enter.ng-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* create animation for deleting list item  */
+#fighter-list li.ng-leave {
+    transition: 0.1s linear all;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#fighter-list li.ng-leave.ng-leave-active {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+/* #fighter-list li.ng-leave-stagger {
+    transition-delay: 0.3s;
+    transition-duration: 0;
+} */
